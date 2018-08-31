@@ -29,6 +29,7 @@ using Spring.Http;
 using Spring.Http.Client;
 using Spring.Http.Client.Interceptor;
 using Spring.Http.Converters;
+using Spring.Http.Converters.Json;
 using Spring.Http.Converters.Xml;
 #if NET_3_5 || SILVERLIGHT
 using Spring.Http.Converters.Json;
@@ -228,6 +229,7 @@ namespace Spring.Rest.Client
             this._messageConverters.Add(new ByteArrayHttpMessageConverter());
             this._messageConverters.Add(new StringHttpMessageConverter());
             this._messageConverters.Add(new FormHttpMessageConverter());
+            this._messageConverters.Add(new NJsonHttpMessageConverter());
 #if !SILVERLIGHT
             this._messageConverters.Add(new XmlDocumentHttpMessageConverter());
 #endif
